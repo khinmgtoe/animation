@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>svg animation</title>
+</head>
+<style>
+    body{
+        padding: 0;
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background: url(images/Bagan\ in\ Myanmar\ -\ Alamy\ Stock\ Photo.jpg);
+        background-size: 50%;
+    }
+    .container{
+        width: 100%;
+        height: 100%;
+    }
+    svg{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+       width: 100%;
+       height: 250px;
+    }
+     #text{
+       font-size: 150px;
+       stroke: #fff;
+       stroke-width: 1px;
+       stroke-linejoin: round;
+       stroke-dasharray: 80;
+       fill: rgba(22, 186, 194, 0.627);
+       animation: my-animation 2s linear infinite;
+    }
+    @keyframes my-animation{
+        100%{
+            stroke-dashoffset: 200;
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <svg>
+            <symbol id="text">
+                <text text-anchor="middle" x="50%" y="50%">SVG animation</text>
+            </symbol>
+            <use xlink:href="#text"></use>
+        </svg>
+    </div>
+</body>
+</html>

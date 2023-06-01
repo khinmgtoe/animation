@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise3</title>
+</head>
+<style>
+    body{
+        padding: 0;
+        margin: 0;
+    }
+    svg{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    }
+    svg .cls-1{
+        stroke: #000;
+        fill: transparent;
+        stroke-width: 5px;
+        stroke-dasharray: 5000;
+        stroke-dashoffset: 5000;
+        animation: my-animation 3s forwards infinite;
+      
+    }
+    @keyframes my-animation{
+        to{
+            stroke-dashoffset: 0;
+        }
+    }
+</style>
+<body>
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 792.66 557.14">
+        <defs>
+            <style>
+                .cls-1 {
+                    fill: #fff;
+                    stroke: #000;
+                    stroke-miterlimit: 10;
+                    stroke-width: 8px;
+                }
+            </style>
+        </defs>
+        <path class="cls-1"
+            d="M1420,766V366c0,2-151.85-.82-151.85-.82V766H1118V365.18L974,364s-2,400,0,402l2,2s152,91,150,91h363.31V310.46L1335,314l-116-4,1,291-54,2h0l-5.54-293H918.15L926,697h0L703,859"
+            transform="translate(-700.65 -305.86)" />
+    </svg>
+</body>
+
+</html>

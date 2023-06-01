@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="exercise2.css">
+    <link rel="short icon" href="#">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:900');
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+
+            background: url(images/Rare\ Gallery\ wallpaper.png);
+            font-family: 'Montserrat', sans-serif;
+            background-size:calc(100%);
+        }
+        svg{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 90%;
+            height: 300px;
+        }
+         text{
+            font-size:150px;
+            fill: rgba(0, 0, 0, 0.1);
+            stroke-width: 1px;
+            stroke: #fff;
+            stroke-linejoin:round ;
+            stroke-dasharray: 80;
+            animation: animate 1s linear infinite;
+        }
+        @keyframes animate {
+            100%{
+                stroke-dashoffset: 160;
+            }
+        }
+    </style>
+</head>
+<body>
+<svg>
+    <symbol id="text">
+        <text text-anchor="middle" x="50%" y="80%">Lightsman 7</text>
+    </symbol>
+    <use xlink:href="#text"></use>
+</svg>
+</body>
+</html>

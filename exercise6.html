@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>svg animation</title>
+</head>
+<style>
+    body{
+        padding: 0;
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .container{
+        width: 100%;
+        height: 100%;
+    }
+    svg{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        width: 40%;
+        height: 90%;
+
+    }
+    svg .cls-1{
+        stroke: #d1631e;
+        stroke-width: 2px;
+        stroke-dasharray: 80;
+        stroke-linecap: round;
+        animation: my-animation 2s linear infinite;
+    }
+    @keyframes my-animation{
+        100%{
+            stroke-dashoffset: 160;
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 379.67 357.92">
+            <defs>
+                <style>
+                    .cls-1 {
+                        fill: #da1c5c;
+                        stroke: #231f20;
+                        stroke-miterlimit: 10;
+                    }
+                </style>
+            </defs>
+            <path class="cls-1"
+                d="M333.69,339c5.09-6.78,36.67-47.44,90.3-51,9-.59,40.64-2.22,70.74,18.5,8.38,5.77,27.36,19.22,36.36,44.16,12.55,34.75-3.21,67.08-10.39,81.82a138,138,0,0,1-29.87,40.26c-11.25,13.42-29,34.71-50.65,61-72,87.56-83.18,104.84-101.72,103.5s-20.17-19.54-82.8-100.06c-23.79-30.59-27.91-33.56-45.35-58-30.54-42.76-45.91-64.76-50.65-94.81-2.54-16.12-7.87-49.92,13-76,23.24-29,66.21-32.41,96.13-24C310.75,296.25,330,332,333.69,339Z"
+                transform="translate(-156.62 -280)" />
+        </svg>
+    </div>
+</body>
+</html>
